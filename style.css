@@ -1,0 +1,38 @@
+body{
+  font-family: sans-serif;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+h1{
+  color: #ff6363;
+  font-weight: bold;
+}
+p
+{
+  font-size: 20px;
+  color:#484848;
+}
+/* Navbar header links*/
+.header-links{
+position: fixed;
+width: 100%;
+z-index: 500;
+}
+.header-links li{
+  color: white;
+  display: inline;
+  float: right;
+  padding: 15px;
+  font-size: 16px;
+}
+.header-links a{
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
