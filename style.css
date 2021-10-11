@@ -1,38 +1,122 @@
-body{
-  font-family: sans-serif;
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin:0;
 }
-ul{
-  list-style-type: none;
-}
-a{
-  text-decoration: none;
-}
-h1{
-  color: #ff6363;
-  font-weight: bold;
-}
-p
+a
 {
-  font-size: 20px;
-  color:#484848;
+  text-decoration: none !important;
 }
+.header-waves {
+  position:relative;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+}
+
+.inner-waves {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% {
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+}
+
+
 /* Navbar header links*/
-.header-links{
-position: fixed;
-width: 100%;
-z-index: 500;
+.header-links {
+  position: fixed;
+  width: 100%;
+  z-index: 500;
 }
-.header-links li{
+
+.header-links li {
   color: white;
   display: inline;
   float: right;
   padding: 15px;
   font-size: 16px;
+  text-decoration: none;
 }
-.header-links a{
-  color: black;
+
+.header-links a {
+  color: #A2D2FF;
   font-size: 20px;
   font-weight: bold;
   margin-left: auto;
   margin-right: auto;
+}
+
+.header-links a::after {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 0;
+  height: 2px;
+  background-color:#950101;
+  content: "";
+  opacity: 0;
+  -webkit-transition: width 0.6s, opacity 0.8s;
+  -moz-transition: width 0.6s, opacity 0.8s;
+  transition: width 0.6s, opacity 0.8s;
+}
+
+.header-links a:hover::after,
+.header-links a:focus::after {
+  opacity: 1;
+  width: 100%;
 }
