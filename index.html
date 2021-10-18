@@ -9,20 +9,56 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <body>
-  <!--Navbar header-->
-  <div class="nav-header">
-    <div class="header-links">
-      <ul>
-        <li data-menuanchor="fourthpage"><a href="#contact">CONTACT</a></li>
-        <li data-menuanchor="Thirdpage"><a href="#Portfolio">PORTFOLIO</a></li>
-        <li data-menuanchor="Secondpage"><a href="#about">ABOUT</a></li>
-      </ul>
+  <!-- navbar links start-->
+  <div class="header-waves">
+    <div class="nav-header">
+      <div class="header-links">
+        <ul>
+          <li data-menuanchor="fourthPage"><a href="#contact">CONTACT</a></li>
+          <li data-menuanchor="thirdPage"><a href="#portfolio">PORTFOLIO</a></li>
+          <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- navbar links end-->
+
+
+    <!--  start Home page context -->
+    <div class="inner-waves flex">
+      <div class="section aboutme" data-anchor="aboutme">
+        <div class="opaque-bg animated fadeInDown">
+          <h1 style="color:white">HEMANT<span style="color:white">/</span>SINGH</h1>
+          <p><span id="holder"></span><span class="blinking-curser">|</span></p>
+        </div>
+      </div>
+    </div>
+
+  <!-- end of homepage context-->
+
+    <!-- Start SVG Waves Container-->
+    <div>
+        <!-- start of bouncing icon-->
+        <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
+        <!--end of bouncing icon-->
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+      </svg>
     </div>
   </div>
-  <!-- End of Navbar section-->
-<div class="nav-slider">
+  <!--end of SVG waves container-->
 
-</div>
+
+  <!--beging fullpage-->
+
+
 </body>
 
 </html>
